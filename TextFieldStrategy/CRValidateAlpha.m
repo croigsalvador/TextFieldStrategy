@@ -11,7 +11,7 @@
 @implementation CRValidateAlpha
 
 - (BOOL)validate:(NSString *)text {
-    
+    NSLog(@"Alpha Validation");
     return YES;
 }
 

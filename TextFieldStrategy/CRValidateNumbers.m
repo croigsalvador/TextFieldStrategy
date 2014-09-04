@@ -11,7 +11,7 @@
 @implementation CRValidateNumbers
 
 - (BOOL)validate:(NSString *)text {
-    
+    NSLog(@"Number Validation");
     return YES;
 }
 

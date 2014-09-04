@@ -11,7 +11,7 @@
 @implementation CRValidateEmojis
 
 - (BOOL)validate:(NSString *)text {
-    
+    NSLog(@"Emoji Validation");
     return YES;
 }
 

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CRValidateTextField.h"
 
 @interface CRContextTextField : UITextField
+
+@property (strong, nonatomic) id <CRValidateTextField> strategyValidation;
+- (BOOL)validate;
 
 @end

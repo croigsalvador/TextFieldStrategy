@@ -7,8 +7,15 @@
 //
 
 #import "CRViewController.h"
+#import "CRContextTextField.h"
+#import "CRValidateAlpha.h"
+#import "CRValidateEmojis.h"
+#import "CRValidateNumbers.h"
 
-@interface CRViewController ()
+@interface CRViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet CRContextTextField *alphaTextField;
+@property (weak, nonatomic) IBOutlet CRContextTextField *numberTextField;
+@property (weak, nonatomic) IBOutlet CRContextTextField *emojiTextField;
 
 @end
 
@@ -17,13 +24,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.alphaTextField.strategyValidation = [[CRValidateAlpha alloc] init];
+    self.numberTextField.strategyValidation = [[CRValidateNumbers alloc] init];
+    self.emojiTextField.strategyValidation = [[CRValidateEmojis alloc] init];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if ([textField isKindOfClass:[CRContextTextField class]]) {
+        [(CRContextTextField *)textField validate];
+    }
 }
 
 @end
