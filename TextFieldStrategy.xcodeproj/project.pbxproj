@@ -21,6 +21,10 @@
 		C7510B9D19B8391B0035CD36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7510B7F19B8391B0035CD36 /* UIKit.framework */; };
 		C7510BA519B8391B0035CD36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7510BA319B8391B0035CD36 /* InfoPlist.strings */; };
 		C7510BA719B8391B0035CD36 /* TextFieldStrategyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7510BA619B8391B0035CD36 /* TextFieldStrategyTests.m */; };
+		C7510BB819B83B8B0035CD36 /* CRValidateAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C7510BB719B83B8B0035CD36 /* CRValidateAlpha.m */; };
+		C7510BBB19B83B9B0035CD36 /* CRValidateNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7510BBA19B83B9B0035CD36 /* CRValidateNumbers.m */; };
+		C7510BBE19B83BA90035CD36 /* CRValidateEmojis.m in Sources */ = {isa = PBXBuildFile; fileRef = C7510BBD19B83BA90035CD36 /* CRValidateEmojis.m */; };
+		C7510BC519B83CE00035CD36 /* CRContextTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7510BC419B83CE00035CD36 /* CRContextTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,15 @@
 		C7510BA219B8391B0035CD36 /* TextFieldStrategyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFieldStrategyTests-Info.plist"; sourceTree = "<group>"; };
 		C7510BA419B8391B0035CD36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7510BA619B8391B0035CD36 /* TextFieldStrategyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldStrategyTests.m; sourceTree = "<group>"; };
+		C7510BB519B83B620035CD36 /* CRValidateTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRValidateTextField.h; sourceTree = "<group>"; };
+		C7510BB619B83B8B0035CD36 /* CRValidateAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRValidateAlpha.h; sourceTree = "<group>"; };
+		C7510BB719B83B8B0035CD36 /* CRValidateAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRValidateAlpha.m; sourceTree = "<group>"; };
+		C7510BB919B83B9B0035CD36 /* CRValidateNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRValidateNumbers.h; sourceTree = "<group>"; };
+		C7510BBA19B83B9B0035CD36 /* CRValidateNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRValidateNumbers.m; sourceTree = "<group>"; };
+		C7510BBC19B83BA90035CD36 /* CRValidateEmojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRValidateEmojis.h; sourceTree = "<group>"; };
+		C7510BBD19B83BA90035CD36 /* CRValidateEmojis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRValidateEmojis.m; sourceTree = "<group>"; };
+		C7510BC319B83CE00035CD36 /* CRContextTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRContextTextField.h; sourceTree = "<group>"; };
+		C7510BC419B83CE00035CD36 /* CRContextTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRContextTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +125,11 @@
 		C7510B8119B8391B0035CD36 /* TextFieldStrategy */ = {
 			isa = PBXGroup;
 			children = (
-				C7510B8A19B8391B0035CD36 /* CRAppDelegate.h */,
-				C7510B8B19B8391B0035CD36 /* CRAppDelegate.m */,
-				C7510B8D19B8391B0035CD36 /* Main.storyboard */,
-				C7510B9019B8391B0035CD36 /* CRViewController.h */,
-				C7510B9119B8391B0035CD36 /* CRViewController.m */,
-				C7510B9319B8391B0035CD36 /* Images.xcassets */,
+				C7510BB019B83AE70035CD36 /* Model */,
+				C7510BB319B83B050035CD36 /* View */,
+				C7510BB119B83AF20035CD36 /* Controller */,
+				C7510BB219B83AF90035CD36 /* AppDelegate */,
+				C7510BB419B83B0D0035CD36 /* Resources */,
 				C7510B8219B8391B0035CD36 /* Supporting Files */,
 			);
 			path = TextFieldStrategy;
@@ -150,6 +162,88 @@
 				C7510BA319B8391B0035CD36 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7510BB019B83AE70035CD36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BB519B83B620035CD36 /* CRValidateTextField.h */,
+				C7510BC119B83BC50035CD36 /* Alpha */,
+				C7510BC019B83BBB0035CD36 /* Numbers */,
+				C7510BBF19B83BB10035CD36 /* Emojis */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C7510BB119B83AF20035CD36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7510B9019B8391B0035CD36 /* CRViewController.h */,
+				C7510B9119B8391B0035CD36 /* CRViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C7510BB219B83AF90035CD36 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C7510B8A19B8391B0035CD36 /* CRAppDelegate.h */,
+				C7510B8B19B8391B0035CD36 /* CRAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C7510BB319B83B050035CD36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BC219B83CBF0035CD36 /* TextField */,
+				C7510B8D19B8391B0035CD36 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C7510BB419B83B0D0035CD36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7510B9319B8391B0035CD36 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C7510BBF19B83BB10035CD36 /* Emojis */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BBC19B83BA90035CD36 /* CRValidateEmojis.h */,
+				C7510BBD19B83BA90035CD36 /* CRValidateEmojis.m */,
+			);
+			name = Emojis;
+			sourceTree = "<group>";
+		};
+		C7510BC019B83BBB0035CD36 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BB919B83B9B0035CD36 /* CRValidateNumbers.h */,
+				C7510BBA19B83B9B0035CD36 /* CRValidateNumbers.m */,
+			);
+			name = Numbers;
+			sourceTree = "<group>";
+		};
+		C7510BC119B83BC50035CD36 /* Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BB619B83B8B0035CD36 /* CRValidateAlpha.h */,
+				C7510BB719B83B8B0035CD36 /* CRValidateAlpha.m */,
+			);
+			name = Alpha;
+			sourceTree = "<group>";
+		};
+		C7510BC219B83CBF0035CD36 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				C7510BC319B83CE00035CD36 /* CRContextTextField.h */,
+				C7510BC419B83CE00035CD36 /* CRContextTextField.m */,
+			);
+			name = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7510BC519B83CE00035CD36 /* CRContextTextField.m in Sources */,
+				C7510BBB19B83B9B0035CD36 /* CRValidateNumbers.m in Sources */,
 				C7510B8819B8391B0035CD36 /* main.m in Sources */,
+				C7510BB819B83B8B0035CD36 /* CRValidateAlpha.m in Sources */,
+				C7510BBE19B83BA90035CD36 /* CRValidateEmojis.m in Sources */,
 				C7510B8C19B8391B0035CD36 /* CRAppDelegate.m in Sources */,
 				C7510B9219B8391B0035CD36 /* CRViewController.m in Sources */,
 			);
